@@ -1,4 +1,5 @@
 ﻿using launcher_minecraft._class;
+using launcher_minecraft._forms;
 using launcher_minecraft.Properties;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,11 @@ namespace launcher_minecraft
     {
         dataBase db = new dataBase();
         OleDbConnection con = new OleDbConnection(Settings.Default["DataBase"].ToString());
-        string username = "";
-        string password = "";
-        bool admin;
-        bool saved;
+        _admin aForm = new _admin();
+        string username = Settings.Default["username"].ToString();
+        string password = Settings.Default["password"].ToString();
+        string admin;
+        bool saved = Convert.ToBoolean(Settings.Default["save"]);
         bool online;
 
 
@@ -42,16 +44,20 @@ namespace launcher_minecraft
 
         void _launcher_Load(object sender, EventArgs e)
         {
-
+            if (Internet.CheckConnection())
+                goto есть;
+            else { MessageBox.Show("Соединение с интернетом не найдено, использование лаунчера невозможно, сорри...", "Ошибка соеднинения.", MessageBoxButtons.OK, MessageBoxIcon.Error); Application.Exit(); }
+            есть:
+            loadSaved();
         }
 
         void проверкаСтатуса()
         {
-            if (admin == true)
+            if (admin == "да")
             {
                 _админПанель.Visible = true;
             }
-            else if (admin == false) { _админПанель.Visible = false; }
+            else if (admin == "нет") { _админПанель.Visible = false; }
         }
 
         void _войти_Click(object sender, EventArgs e)
@@ -60,31 +66,51 @@ namespace launcher_minecraft
                 MessageBox.Show("Ошибка авторизации, корректно заполните данные для авторизации", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                username = _полеИмя.Text;
-                password = _парольПоле.Text;
                 try
                 {
-                    OleDbDataAdapter ada = new OleDbDataAdapter("SELECT COUNT(*) FROM users where никнейм = '" + username + "'and пароль = '" + password + "'", con);
+                    OleDbDataAdapter ada = new OleDbDataAdapter("SELECT COUNT(*) FROM users where никнейм = '" + _полеИмя.Text + "'and пароль = '" + _парольПоле.Text + "'", con);
                     DataTable dt = new DataTable();
                     ada.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
                         DataSet st = new DataSet();
-                        OleDbDataAdapter getStatus = new OleDbDataAdapter("SELECT админ FROM users where никнейм = '" + username + "'", con);
+                        OleDbDataAdapter getStatus = new OleDbDataAdapter("SELECT админ FROM users where никнейм = '" + _полеИмя.Text + "'", con);
                         getStatus.Fill(st);
                         foreach (DataRow row in st.Tables[0].Rows)
                         {
-                            admin = Convert.ToBoolean(row["админ"]);
+                            admin = Convert.ToString(row["админ"]);
                         }
-                        OleDbDataAdapter online = new OleDbDataAdapter("INSERT INTO users ([онлайн])  VALUES (?) WHERE никнейм = '" + username + "'", con);
                         //onlineUser(username,true);
                         проверкаСтатуса();
                         _выйти.Visible = true;
+                        if(_сохранитьПароль.Checked == true)
+                        {
+                            saved = true;
+                            Settings.Default["username"] = _полеИмя.Text;
+                            Settings.Default["password"] = _парольПоле.Text;
+                            Settings.Default["save"] = saved;
+                            Settings.Default.Save();
+                        }
+                        else
+                        {
+                            saved = false;
+                            Settings.Default["username"] = "";
+                            Settings.Default["password"] = "";
+                            Settings.Default["save"] = saved;
+                            Settings.Default.Save();
+                        }
                     }
-
+                    else MessageBox.Show("Не правильный логин или пароль.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception error) { MessageBox.Show(error.ToString()); }
             }
+        }
+
+        void loadSaved()
+        {
+            _сохранитьПароль.Checked = saved;
+            _полеИмя.Text = username;
+            _парольПоле.Text = password;
         }
 
         void onlineUser(string nick, bool onl)
@@ -107,6 +133,17 @@ namespace launcher_minecraft
             _парольПоле.Text = string.Empty;
             _сохранитьПароль.Checked = false;
             _админПанель.Visible = false;
+            //
+            saved = false;
+            Settings.Default["username"] = "";
+            Settings.Default["password"] = "";
+            Settings.Default["save"] = saved;
+            Settings.Default.Save();
+        }
+
+        void _админПанель_Click(object sender, EventArgs e)
+        {
+            aForm.ShowDialog();
         }
     }
 }

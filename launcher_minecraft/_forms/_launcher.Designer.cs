@@ -38,6 +38,9 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this._группаНовости = new Guna.UI2.WinForms.Guna2GroupBox();
+            this._админПанель = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this._версияЛокальная = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this._выйти = new Guna.UI2.WinForms.Guna2Button();
             this._версияСервер = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,9 +52,6 @@
             this.shadow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this._войти = new Guna.UI2.WinForms.Guna2Button();
             this._сохранитьПароль = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this._админПанель = new Guna.UI2.WinForms.Guna2Button();
             this._head.SuspendLayout();
             this._группаНовости.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -81,10 +81,12 @@
             this._полеИмя.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this._полеИмя.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this._полеИмя.FocusedState.Parent = this._полеИмя;
+            this._полеИмя.Font = new System.Drawing.Font("Century Gothic", 10F);
             this._полеИмя.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
             this._полеИмя.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this._полеИмя.HoverState.Parent = this._полеИмя;
             this._полеИмя.Location = new System.Drawing.Point(98, 474);
+            this._полеИмя.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._полеИмя.Name = "_полеИмя";
             this._полеИмя.PasswordChar = '\0';
             this._полеИмя.PlaceholderText = "";
@@ -98,7 +100,7 @@
             this._название.BackColor = System.Drawing.Color.Transparent;
             this._название.Font = new System.Drawing.Font("Century Gothic", 12F);
             this._название.ForeColor = System.Drawing.Color.White;
-            this._название.Location = new System.Drawing.Point(8, 1);
+            this._название.Location = new System.Drawing.Point(8, 0);
             this._название.Name = "_название";
             this._название.Size = new System.Drawing.Size(99, 23);
             this._название.TabIndex = 2;
@@ -185,6 +187,49 @@
             this._группаНовости.TabIndex = 4;
             this._группаНовости.Text = "Новости";
             // 
+            // _админПанель
+            // 
+            this._админПанель.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._админПанель.Animated = true;
+            this._админПанель.CheckedState.Parent = this._админПанель;
+            this._админПанель.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._админПанель.CustomImages.Parent = this._админПанель;
+            this._админПанель.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._админПанель.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this._админПанель.ForeColor = System.Drawing.Color.White;
+            this._админПанель.HoverState.Parent = this._админПанель;
+            this._админПанель.Location = new System.Drawing.Point(818, 9);
+            this._админПанель.Name = "_админПанель";
+            this._админПанель.ShadowDecoration.Parent = this._админПанель;
+            this._админПанель.Size = new System.Drawing.Size(128, 23);
+            this._админПанель.TabIndex = 13;
+            this._админПанель.Text = "АДМИН ПАНЕЛЬ";
+            this._админПанель.Visible = false;
+            this._админПанель.Click += new System.EventHandler(this._админПанель_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::launcher_minecraft.Properties.Resources._logo;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(7, 44);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(318, 197);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 11;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(7, 247);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(318, 152);
+            this.guna2HtmlLabel3.TabIndex = 12;
+            this.guna2HtmlLabel3.Text = "Разработчик лаунчера: eas1ly\r\nРазработчик сервера: FallenDenica\r\n";
+            // 
             // _версияЛокальная
             // 
             this._версияЛокальная.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -258,10 +303,12 @@
             this._парольПоле.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this._парольПоле.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this._парольПоле.FocusedState.Parent = this._парольПоле;
+            this._парольПоле.Font = new System.Drawing.Font("Century Gothic", 10F);
             this._парольПоле.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
             this._парольПоле.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this._парольПоле.HoverState.Parent = this._парольПоле;
             this._парольПоле.Location = new System.Drawing.Point(98, 501);
+            this._парольПоле.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._парольПоле.Name = "_парольПоле";
             this._парольПоле.PasswordChar = '\0';
             this._парольПоле.PlaceholderText = "";
@@ -334,48 +381,6 @@
             this._сохранитьПароль.UncheckedState.BorderRadius = 0;
             this._сохранитьПароль.UncheckedState.BorderThickness = 0;
             this._сохранитьПароль.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::launcher_minecraft.Properties.Resources._logo;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(7, 44);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(318, 197);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 11;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.AutoSize = false;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(7, 247);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(318, 152);
-            this.guna2HtmlLabel3.TabIndex = 12;
-            this.guna2HtmlLabel3.Text = "Разработчик лаунчера: eas1ly\r\nРазработчик сервера: FallenDenica\r\n";
-            // 
-            // _админПанель
-            // 
-            this._админПанель.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._админПанель.Animated = true;
-            this._админПанель.CheckedState.Parent = this._админПанель;
-            this._админПанель.Cursor = System.Windows.Forms.Cursors.Hand;
-            this._админПанель.CustomImages.Parent = this._админПанель;
-            this._админПанель.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this._админПанель.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this._админПанель.ForeColor = System.Drawing.Color.White;
-            this._админПанель.HoverState.Parent = this._админПанель;
-            this._админПанель.Location = new System.Drawing.Point(818, 9);
-            this._админПанель.Name = "_админПанель";
-            this._админПанель.ShadowDecoration.Parent = this._админПанель;
-            this._админПанель.Size = new System.Drawing.Size(128, 23);
-            this._админПанель.TabIndex = 13;
-            this._админПанель.Text = "АДМИН ПАНЕЛЬ";
-            this._админПанель.Visible = false;
             // 
             // _launcher
             // 

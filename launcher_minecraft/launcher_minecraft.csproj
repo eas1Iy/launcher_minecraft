@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="_class\dataBase.cs" />
+    <Compile Include="_class\Internet.cs" />
     <Compile Include="_forms\_admin.cs">
       <SubType>Form</SubType>
     </Compile>
