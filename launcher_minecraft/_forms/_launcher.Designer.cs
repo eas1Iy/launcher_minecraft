@@ -34,22 +34,24 @@
             this._полеИмя = new Guna.UI2.WinForms.Guna2TextBox();
             this._название = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this._head = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this._группаНовости = new Guna.UI2.WinForms.Guna2GroupBox();
-            this._обновления = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this._версияСервер = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this._версияЛокальная = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this._выйти = new Guna.UI2.WinForms.Guna2Button();
+            this._версияСервер = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this._обновления = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.drag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this._парольПоле = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.shadow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this._войти = new Guna.UI2.WinForms.Guna2Button();
+            this._сохранитьПароль = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this._админПанель = new Guna.UI2.WinForms.Guna2Button();
             this._head.SuspendLayout();
             this._группаНовости.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -116,14 +118,61 @@
             this._head.Size = new System.Drawing.Size(1040, 23);
             this._head.TabIndex = 3;
             // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.Animated = true;
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(955, -1);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
+            this.guna2ControlBox3.Size = new System.Drawing.Size(38, 24);
+            this.guna2ControlBox3.TabIndex = 12;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.Animated = true;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(911, -1);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(38, 24);
+            this.guna2ControlBox2.TabIndex = 11;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.Animated = true;
+            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(999, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(38, 24);
+            this.guna2ControlBox1.TabIndex = 10;
+            // 
             // _группаНовости
             // 
             this._группаНовости.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._группаНовости.BorderColor = System.Drawing.Color.Transparent;
+            this._группаНовости.Controls.Add(this._админПанель);
+            this._группаНовости.Controls.Add(this.guna2PictureBox1);
+            this._группаНовости.Controls.Add(this.guna2HtmlLabel3);
             this._группаНовости.Controls.Add(this._версияЛокальная);
-            this._группаНовости.Controls.Add(this.guna2Button2);
+            this._группаНовости.Controls.Add(this._выйти);
             this._группаНовости.Controls.Add(this._версияСервер);
             this._группаНовости.Controls.Add(this._обновления);
             this._группаНовости.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
@@ -136,16 +185,37 @@
             this._группаНовости.TabIndex = 4;
             this._группаНовости.Text = "Новости";
             // 
-            // _обновления
+            // _версияЛокальная
             // 
-            this._обновления.AutoSize = false;
-            this._обновления.BackColor = System.Drawing.Color.Transparent;
-            this._обновления.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this._обновления.Location = new System.Drawing.Point(7, 44);
-            this._обновления.Name = "_обновления";
-            this._обновления.Size = new System.Drawing.Size(1016, 355);
-            this._обновления.TabIndex = 0;
-            this._обновления.Text = "ОБНОВЛЕНИЯ";
+            this._версияЛокальная.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._версияЛокальная.AutoSize = false;
+            this._версияЛокальная.BackColor = System.Drawing.Color.Transparent;
+            this._версияЛокальная.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._версияЛокальная.Location = new System.Drawing.Point(753, 405);
+            this._версияЛокальная.Name = "_версияЛокальная";
+            this._версияЛокальная.Size = new System.Drawing.Size(270, 23);
+            this._версияЛокальная.TabIndex = 2;
+            this._версияЛокальная.Text = "Версия у вас:";
+            // 
+            // _выйти
+            // 
+            this._выйти.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._выйти.Animated = true;
+            this._выйти.CheckedState.Parent = this._выйти;
+            this._выйти.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._выйти.CustomImages.Parent = this._выйти;
+            this._выйти.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._выйти.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this._выйти.ForeColor = System.Drawing.Color.White;
+            this._выйти.HoverState.Parent = this._выйти;
+            this._выйти.Location = new System.Drawing.Point(952, 9);
+            this._выйти.Name = "_выйти";
+            this._выйти.ShadowDecoration.Parent = this._выйти;
+            this._выйти.Size = new System.Drawing.Size(70, 23);
+            this._выйти.TabIndex = 10;
+            this._выйти.Text = "ВЫЙТИ";
+            this._выйти.Visible = false;
+            this._выйти.Click += new System.EventHandler(this._выйти_Click);
             // 
             // _версияСервер
             // 
@@ -159,47 +229,47 @@
             this._версияСервер.TabIndex = 1;
             this._версияСервер.Text = "Версия на сервере:";
             // 
-            // _версияЛокальная
+            // _обновления
             // 
-            this._версияЛокальная.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._версияЛокальная.AutoSize = false;
-            this._версияЛокальная.BackColor = System.Drawing.Color.Transparent;
-            this._версияЛокальная.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this._версияЛокальная.Location = new System.Drawing.Point(650, 405);
-            this._версияЛокальная.Name = "_версияЛокальная";
-            this._версияЛокальная.Size = new System.Drawing.Size(373, 23);
-            this._версияЛокальная.TabIndex = 2;
-            this._версияЛокальная.Text = "Версия у вас:";
+            this._обновления.AutoSize = false;
+            this._обновления.BackColor = System.Drawing.Color.Transparent;
+            this._обновления.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._обновления.Location = new System.Drawing.Point(331, 44);
+            this._обновления.Name = "_обновления";
+            this._обновления.Size = new System.Drawing.Size(692, 355);
+            this._обновления.TabIndex = 0;
+            this._обновления.Text = "ОБНОВЛЕНИЯ";
             // 
             // drag
             // 
             this.drag.TargetControl = this._head;
             this.drag.UseTransparentDrag = true;
             // 
-            // guna2TextBox1
+            // _парольПоле
             // 
-            this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(98, 501);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(135, 21);
-            this.guna2TextBox1.TabIndex = 5;
+            this._парольПоле.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._парольПоле.Animated = true;
+            this._парольПоле.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._парольПоле.DefaultText = "";
+            this._парольПоле.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this._парольПоле.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this._парольПоле.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this._парольПоле.DisabledState.Parent = this._парольПоле;
+            this._парольПоле.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this._парольПоле.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this._парольПоле.FocusedState.Parent = this._парольПоле;
+            this._парольПоле.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._парольПоле.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this._парольПоле.HoverState.Parent = this._парольПоле;
+            this._парольПоле.Location = new System.Drawing.Point(98, 501);
+            this._парольПоле.Name = "_парольПоле";
+            this._парольПоле.PasswordChar = '\0';
+            this._парольПоле.PlaceholderText = "";
+            this._парольПоле.SelectedText = "";
+            this._парольПоле.ShadowDecoration.Parent = this._парольПоле;
+            this._парольПоле.Size = new System.Drawing.Size(135, 21);
+            this._парольПоле.TabIndex = 5;
+            this._парольПоле.UseSystemPasswordChar = true;
             // 
             // guna2HtmlLabel1
             // 
@@ -225,140 +295,108 @@
             this.guna2HtmlLabel2.TabIndex = 7;
             this.guna2HtmlLabel2.Text = "Пароль:";
             // 
-            // guna2Button1
+            // _войти
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(239, 474);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(145, 23);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "ВОЙТИ";
+            this._войти.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._войти.Animated = true;
+            this._войти.CheckedState.Parent = this._войти;
+            this._войти.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._войти.CustomImages.Parent = this._войти;
+            this._войти.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._войти.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this._войти.ForeColor = System.Drawing.Color.White;
+            this._войти.HoverState.Parent = this._войти;
+            this._войти.Location = new System.Drawing.Point(239, 474);
+            this._войти.Name = "_войти";
+            this._войти.ShadowDecoration.Parent = this._войти;
+            this._войти.Size = new System.Drawing.Size(145, 23);
+            this._войти.TabIndex = 8;
+            this._войти.Text = "ВОЙТИ";
+            this._войти.Click += new System.EventHandler(this._войти_Click);
             // 
-            // guna2ControlBox1
+            // _сохранитьПароль
             // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.Animated = true;
-            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(999, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(38, 24);
-            this.guna2ControlBox1.TabIndex = 10;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.Animated = true;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(911, -1);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(38, 24);
-            this.guna2ControlBox2.TabIndex = 11;
-            // 
-            // guna2ControlBox3
-            // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.Animated = true;
-            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(955, -1);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
-            this.guna2ControlBox3.Size = new System.Drawing.Size(38, 24);
-            this.guna2ControlBox3.TabIndex = 12;
-            // 
-            // guna2CheckBox1
-            // 
-            this.guna2CheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2CheckBox1.Animated = true;
-            this.guna2CheckBox1.AutoSize = true;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.guna2CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CheckBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2CheckBox1.Location = new System.Drawing.Point(239, 501);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(91, 21);
-            this.guna2CheckBox1.TabIndex = 9;
-            this.guna2CheckBox1.Text = "Сохранить";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(952, 9);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(70, 23);
-            this.guna2Button2.TabIndex = 10;
-            this.guna2Button2.Text = "ВЫЙТИ";
-            this.guna2Button2.Visible = false;
+            this._сохранитьПароль.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._сохранитьПароль.Animated = true;
+            this._сохранитьПароль.AutoSize = true;
+            this._сохранитьПароль.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._сохранитьПароль.CheckedState.BorderRadius = 0;
+            this._сохранитьПароль.CheckedState.BorderThickness = 0;
+            this._сохранитьПароль.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._сохранитьПароль.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._сохранитьПароль.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this._сохранитьПароль.Location = new System.Drawing.Point(239, 501);
+            this._сохранитьПароль.Name = "_сохранитьПароль";
+            this._сохранитьПароль.Size = new System.Drawing.Size(91, 21);
+            this._сохранитьПароль.TabIndex = 9;
+            this._сохранитьПароль.Text = "Сохранить";
+            this._сохранитьПароль.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this._сохранитьПароль.UncheckedState.BorderRadius = 0;
+            this._сохранитьПароль.UncheckedState.BorderThickness = 0;
+            this._сохранитьПароль.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::launcher_minecraft.Properties.Resources._logo;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(931, 472);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(7, 44);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(96, 59);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(318, 197);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 11;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(7, 247);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(318, 152);
+            this.guna2HtmlLabel3.TabIndex = 12;
+            this.guna2HtmlLabel3.Text = "Разработчик лаунчера: eas1ly\r\nРазработчик сервера: FallenDenica\r\n";
+            // 
+            // _админПанель
+            // 
+            this._админПанель.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._админПанель.Animated = true;
+            this._админПанель.CheckedState.Parent = this._админПанель;
+            this._админПанель.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._админПанель.CustomImages.Parent = this._админПанель;
+            this._админПанель.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._админПанель.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this._админПанель.ForeColor = System.Drawing.Color.White;
+            this._админПанель.HoverState.Parent = this._админПанель;
+            this._админПанель.Location = new System.Drawing.Point(818, 9);
+            this._админПанель.Name = "_админПанель";
+            this._админПанель.ShadowDecoration.Parent = this._админПанель;
+            this._админПанель.Size = new System.Drawing.Size(128, 23);
+            this._админПанель.TabIndex = 13;
+            this._админПанель.Text = "АДМИН ПАНЕЛЬ";
+            this._админПанель.Visible = false;
             // 
             // _launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 540);
-            this.Controls.Add(this.guna2CheckBox1);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this._сохранитьПароль);
+            this.Controls.Add(this._войти);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this._парольПоле);
             this.Controls.Add(this._группаНовости);
             this.Controls.Add(this._head);
             this.Controls.Add(this._полеИмя);
             this.Controls.Add(this._resizeButton);
-            this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(790, 380);
             this.Name = "_launcher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this._launcher_Load);
             this._head.ResumeLayout(false);
             this._head.PerformLayout();
             this._группаНовости.ResumeLayout(false);
@@ -380,17 +418,19 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel _версияСервер;
         private Guna.UI2.WinForms.Guna2HtmlLabel _версияЛокальная;
         private Guna.UI2.WinForms.Guna2DragControl drag;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox _парольПоле;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2ShadowForm shadow;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button _войти;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2CheckBox _сохранитьПароль;
+        private Guna.UI2.WinForms.Guna2Button _выйти;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2Button _админПанель;
     }
 }
 

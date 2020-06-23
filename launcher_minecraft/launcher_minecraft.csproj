@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="_class\dataBase.cs" />
     <Compile Include="_forms\_admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,8 +103,6 @@
   <ItemGroup>
     <None Include="Resources\_logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="_class\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
