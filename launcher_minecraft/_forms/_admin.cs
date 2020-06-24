@@ -16,7 +16,6 @@ namespace launcher_minecraft._forms
     {
         dataBase db = new dataBase();
         OleDbConnection con = new OleDbConnection(Settings.Default["DataBase"].ToString());
-        OleDbConnection con2 = new OleDbConnection(@" provider=Microsoft.ace.Oledb.12.0; data source=cars.accdb; Persist Security Info=False");
         bool z;
 
         public _admin()
@@ -43,22 +42,22 @@ namespace launcher_minecraft._forms
         {
             try
             {
-                //OleDbDataAdapter selectif = new OleDbDataAdapter("SELECT никнейм FROM users", con);
-                //DataTable dt = new DataTable();
-                //selectif.Fill(dt);
-                //bool exists = dt.AsEnumerable().Where(c => c.Field<string>("никнейм").Equals(_имяАдмин.Text.ToString())).Count() > 0;
+                OleDbDataAdapter selectif = new OleDbDataAdapter("SELECT никнейм FROM users", con);
+                DataTable dt = new DataTable();
+                selectif.Fill(dt);
+                bool exists = dt.AsEnumerable().Where(c => c.Field<string>("никнейм").Equals(_имяАдмин.Text.ToString())).Count() > 0;
                 string admin;
-                //if (exists == true)
-                //{
-                //    MessageBox.Show("Данный логин уже занят, попробуйте другой!", "Ошибка регистрации", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-                //else
-                //{
+                if (exists == true)
+                {
+                    MessageBox.Show("Данный логин уже занят, попробуйте другой!", "Ошибка регистрации", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
                     if (_статусАдмин.SelectedIndex == 0) admin = "нет"; else admin = "да";
                     db.userAdd(_имяАдмин.Text, _парольАдмин.Text, admin);
                     _таблицаПользователей.DataSource = db.usersFill();
                     _таблицаПользователей.Update();
-                //}
+                }
             }
             catch (Exception error) { MessageBox.Show(error.ToString()); }
         }

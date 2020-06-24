@@ -52,6 +52,11 @@
             this.shadow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this._войти = new Guna.UI2.WinForms.Guna2Button();
             this._сохранитьПароль = new Guna.UI2.WinForms.Guna2CheckBox();
+            this._runButt = new Guna.UI2.WinForms.Guna2Button();
+            this._ram = new Guna.UI2.WinForms.Guna2TrackBar();
+            this._ramTo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this._ramDie = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this._head.SuspendLayout();
             this._группаНовости.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -382,11 +387,86 @@
             this._сохранитьПароль.UncheckedState.BorderThickness = 0;
             this._сохранитьПароль.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
+            // _runButt
+            // 
+            this._runButt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._runButt.Animated = true;
+            this._runButt.CheckedState.Parent = this._runButt;
+            this._runButt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._runButt.CustomImages.Parent = this._runButt;
+            this._runButt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._runButt.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this._runButt.ForeColor = System.Drawing.Color.White;
+            this._runButt.HoverState.Parent = this._runButt;
+            this._runButt.Location = new System.Drawing.Point(390, 474);
+            this._runButt.Name = "_runButt";
+            this._runButt.ShadowDecoration.Parent = this._runButt;
+            this._runButt.Size = new System.Drawing.Size(145, 23);
+            this._runButt.TabIndex = 10;
+            this._runButt.Text = "ЗАПУСТИТЬ";
+            this._runButt.Visible = false;
+            this._runButt.Click += new System.EventHandler(this._runButt_Click);
+            // 
+            // _ram
+            // 
+            this._ram.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this._ram.HoverState.Parent = this._ram;
+            this._ram.IndicateFocus = false;
+            this._ram.Location = new System.Drawing.Point(390, 503);
+            this._ram.Name = "_ram";
+            this._ram.Size = new System.Drawing.Size(300, 23);
+            this._ram.TabIndex = 11;
+            this._ram.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._ram.Visible = false;
+            // 
+            // _ramTo
+            // 
+            this._ramTo.BackColor = System.Drawing.Color.Transparent;
+            this._ramTo.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this._ramTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._ramTo.Location = new System.Drawing.Point(541, 478);
+            this._ramTo.Name = "_ramTo";
+            this._ramTo.Size = new System.Drawing.Size(110, 19);
+            this._ramTo.TabIndex = 12;
+            this._ramTo.Text = "Выделенно ОЗУ:";
+            this._ramTo.Visible = false;
+            // 
+            // _ramDie
+            // 
+            this._ramDie.BackColor = System.Drawing.Color.Transparent;
+            this._ramDie.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this._ramDie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this._ramDie.Location = new System.Drawing.Point(657, 478);
+            this._ramDie.Name = "_ramDie";
+            this._ramDie.Size = new System.Drawing.Size(53, 19);
+            this._ramDie.TabIndex = 13;
+            this._ramDie.Text = "2000 МБ";
+            this._ramDie.Visible = false;
+            // 
+            // guna2ProgressBar1
+            // 
+            this.guna2ProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(817, 525);
+            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
+            this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.guna2ProgressBar1.ShadowDecoration.Parent = this.guna2ProgressBar1;
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(187, 10);
+            this.guna2ProgressBar1.TabIndex = 14;
+            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ProgressBar1.Visible = false;
+            // 
             // _launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 540);
+            this.Controls.Add(this.guna2ProgressBar1);
+            this.Controls.Add(this._ramDie);
+            this.Controls.Add(this._ramTo);
+            this.Controls.Add(this._ram);
+            this.Controls.Add(this._runButt);
             this.Controls.Add(this._сохранитьПароль);
             this.Controls.Add(this._войти);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -436,6 +516,11 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2Button _админПанель;
+        private Guna.UI2.WinForms.Guna2Button _runButt;
+        private Guna.UI2.WinForms.Guna2TrackBar _ram;
+        private Guna.UI2.WinForms.Guna2HtmlLabel _ramTo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel _ramDie;
+        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
     }
 }
 
